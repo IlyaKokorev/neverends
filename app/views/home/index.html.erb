@@ -1,0 +1,11 @@
+<div class="compliment-container">
+  <% if @compliment.image.attached? %>
+    <%= image_tag @compliment.image, class: "compliment-image" %>
+  <% end %>
+
+  <div class="compliment-text">
+    <%= @compliment.text %>
+  </div>
+
+  <%= button_to "Next", root_path, class: "next-button" %>
+</div>
