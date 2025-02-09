@@ -54,3 +54,20 @@ body {
     background-color: #6a11cb;
   }
 }
+
+.compliment-container {
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.compliment-container {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  &.turbo-loading {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

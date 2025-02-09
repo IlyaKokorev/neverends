@@ -7,5 +7,10 @@ class HomeController < ApplicationController
     if session[:compliment_ids].empty?
       session[:compliment_ids] = Compliment.pluck(:id).shuffle
     end
+
+    respond_to do |format|
+      format.html
+      format.turbo_stream # Добавляем поддержку Turbo Stream
+    end
   end
 end

@@ -1,0 +1,20 @@
+// Добавляем анимацию исчезновения
+document.querySelector('.compliment-container').classList.add('fade-out');
+
+setTimeout(() => {
+    // Обновляем контейнер с комплиментом
+    document.querySelector('.compliment-container').innerHTML = `
+    <% if @compliment.image.attached? %>
+      <%= image_tag @compliment.image, class: "compliment-image" %>
+    <% end %>
+
+    <div class="compliment-text">
+      <%= @compliment.text %>
+    </div>
+
+    <%= link_to "Next", root_path, class: "next-button", remote: true %>
+  `;
+
+    // Убираем анимацию исчезновения
+    document.querySelector('.compliment-container').classList.remove('fade-out');
+}, 500); // Задержка в 0.5 секунды

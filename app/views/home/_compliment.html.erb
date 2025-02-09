@@ -1,0 +1,13 @@
+<div>
+  <% if compliment.image.attached? %>
+    <%= image_tag compliment.image, class: "compliment-image" %>
+  <% end %>
+
+  <div class="compliment-text">
+    <%= compliment.text %>
+  </div>
+
+  <%= link_to "Next", root_path,
+              class: "next-button",
+              data: { turbo_frame: "compliment-container" } %>
+</div>
