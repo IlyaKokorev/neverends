@@ -1,4 +1,4 @@
-<div>
+<div class="compliment-content slide-in-from-bottom">
   <% if compliment.image.attached? %>
     <%= image_tag compliment.image, class: "compliment-image" %>
   <% end %>
@@ -9,5 +9,5 @@
 
   <%= link_to "Next", root_path,
               class: "next-button",
-              data: { turbo_frame: "compliment-container" } %>
+              data: { action: "click->compliment-animation#animateNext" } %>
 </div>
