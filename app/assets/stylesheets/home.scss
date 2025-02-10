@@ -103,10 +103,13 @@ body {
 }
 
 .heart-button {
-  margin-top: 20px;
+  position: fixed;
+  bottom: 20px; /* Отступ от нижней границы экрана */
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px;
   cursor: pointer;
-  background-color: transparent; // Убираем фон
+  background-color: transparent;
   border: none;
   outline: none;
   transition: transform 0.3s ease;
@@ -116,9 +119,8 @@ body {
   }
 
   &:hover svg {
-    transform: scale(1.5); // Увеличиваем иконку при наведении
-    fill: #ff6b6b; // Меняем цвет на более светлый при наведении
+    transform: scale(1.5);
+    fill: #ff6b6b;
   }
 }
-
 
