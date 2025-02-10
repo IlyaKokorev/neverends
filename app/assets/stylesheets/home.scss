@@ -103,10 +103,11 @@ body {
 }
 
 .heart-button {
-  position: fixed;
-  bottom: 20px; /* Отступ от нижней границы экрана */
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;      // Фиксированное позиционирование относительно окна браузера
+  bottom: 20px;         // Отступ от нижней границы страницы (можете подправить по вкусу)
+  left: 50%;            // Центрируем по горизонтали
+  transform: translateX(-50%); // Сдвигаем на половину ширины кнопки для точного центрирования
+  margin: 0;            // Убираем дополнительный отступ сверху
   padding: 10px;
   cursor: pointer;
   background-color: transparent;
@@ -119,8 +120,7 @@ body {
   }
 
   &:hover svg {
-    transform: scale(1.5);
-    fill: #ff6b6b;
+    transform: scale(1.5); // Увеличиваем иконку при наведении
+    fill: #ff6b6b;         // Изменяем цвет иконки при наведении
   }
 }
-

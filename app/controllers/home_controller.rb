@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.turbo_stream # Добавляем поддержку Turbo Stream
+      format.turbo_stream
     end
   end
 end
