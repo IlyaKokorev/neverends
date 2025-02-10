@@ -102,3 +102,23 @@ body {
   animation: slideInFromBottom 0.5s forwards;
 }
 
+.heart-button {
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent; // Убираем фон
+  border: none;
+  outline: none;
+  transition: transform 0.3s ease;
+
+  svg {
+    transition: transform 0.3s ease, fill 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: scale(1.5); // Увеличиваем иконку при наведении
+    fill: #ff6b6b; // Меняем цвет на более светлый при наведении
+  }
+}
+
+
