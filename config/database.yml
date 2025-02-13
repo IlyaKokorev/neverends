@@ -2,7 +2,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
+  username: postgres
+  password: postgres
+  host: db  # Имя контейнера с базой данных (по умолчанию в docker-compose.yml)
 
 development:
   <<: *default
@@ -15,5 +17,5 @@ test:
 production:
   <<: *default
   database: neverends_production
-  username: neverends
-  password: <%= ENV["NEVERENDS_DATABASE_PASSWORD"] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
