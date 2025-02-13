@@ -17,4 +17,6 @@ Rails.application.configure do
   config.active_support.report_deprecations = false
   config.active_record.dump_schema_after_migration = false
   config.active_record.attributes_for_inspect = [ :id ]
+  config.assets.compile = false
+  config.assets.digest = true
 end
