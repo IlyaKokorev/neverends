@@ -4,8 +4,6 @@ services:
     build: .
     ports:
       - "3000:3000"
-    volumes:
-      - ".:/rails"
     environment:
       RAILS_ENV: "production"
       RAILS_MASTER_KEY: "2a326bf4bb17d305c13437dd403a833d"
